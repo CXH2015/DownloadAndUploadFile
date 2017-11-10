@@ -6,5 +6,14 @@
 <param name="savePath">/uploadFiles</param>
 <result name="success">/uploadSucc.jsp</result>
 </action>
+<action name="download" class="com.action.FileDownloadAction">
+<param name="inputPath">\uploadFiles\abc.rar</param>
+<result name="success" type="stream">
+<param name="contentType">application/rar</param>
+<param name="inputName">targetFile</param>
+<param name="contentDisposition">filename="abc.rar"</param>
+<param name="bufferSize">4096</param>
+</result>
+</action>
 </package>
 </struts>
